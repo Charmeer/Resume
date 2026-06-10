@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Github, Linkedin } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Phone } from "lucide-react";
 
 export function Contact() {
   return (
@@ -27,6 +27,14 @@ export function Contact() {
             rohitbiswas1405@gmail.com
             <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100" />
             <ArrowUpRight className="ml-2 h-6 w-6 md:h-7 md:w-7 opacity-0 -translate-y-2 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0" />
+          </a>
+
+          <a
+            href="tel:+917044566300"
+            className="mt-4 inline-flex items-center gap-2 text-base text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            +91 70445 66300
           </a>
         </motion.div>
 
