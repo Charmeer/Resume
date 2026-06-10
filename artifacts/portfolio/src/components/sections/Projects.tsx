@@ -92,13 +92,23 @@ export function Projects() {
                   </div>
                 </div>
 
-                <div className={`relative rounded-2xl overflow-hidden bg-muted aspect-[4/3] order-1 md:order-none ${index % 2 !== 0 ? "md:order-1" : ""}`}>
+                <div className={`relative rounded-2xl overflow-hidden bg-[#0d0d0d] aspect-[16/10] order-1 md:order-none ${index % 2 !== 0 ? "md:order-1" : ""}`}>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                   />
-                  <div className="absolute inset-0 ring-1 ring-inset ring-black/10 dark:ring-white/10 rounded-2xl pointer-events-none" />
+                  {/* warm vignette overlay */}
+                  <div className="absolute inset-0 pointer-events-none rounded-2xl"
+                    style={{
+                      background: "radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.55) 100%)",
+                    }}
+                  />
+                  {/* subtle terracotta tint on hover */}
+                  <div className="absolute inset-0 pointer-events-none rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    style={{ background: "rgba(166, 88, 55, 0.07)" }}
+                  />
+                  <div className="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl pointer-events-none" />
                 </div>
 
               </div>
