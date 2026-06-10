@@ -1,0 +1,26 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "vrvT41w9jw2cd8x8dtpgm"
+uri = "file://artifacts/portfolio/public/profile.png"
+type = "image"
+title = "Profile portrait of developer"
+
+[[generated]]
+id = "V4OF4T0wbQPvQrX9zHcsl"
+uri = "file://artifacts/portfolio/public/project1.png"
+type = "image"
+title = "Modern dashboard UI mockup"
+
+[[generated]]
+id = "vxPt-N0TF74Q0c70EpWlu"
+uri = "file://artifacts/portfolio/public/project2.png"
+type = "image"
+title = "E-commerce app interface"
+
+[[generated]]
+id = "UZaU61CNX0M8bk1H1yTP9"
+uri = "file://artifacts/portfolio/public/project3.png"
+type = "image"
+title = "Abstract branding concept"
