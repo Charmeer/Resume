@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import stockMarketImg from "@assets/image_1781093786738.png";
+import vendorImg from "@assets/image_1781094562724.png";
 
 const PROJECTS = [
   {
@@ -18,7 +19,7 @@ const PROJECTS = [
     description:
       "Built a full analytics pipeline using SQL, SQLite, Python, and Power BI to evaluate vendor and brand profitability end-to-end. Conducted EDA, outlier detection, correlation analysis, and hypothesis testing to identify key profitability drivers. Developed KPI dashboards tracking sales, purchase contributions, and inventory turnover with actionable pricing recommendations.",
     tags: ["SQL", "SQLite", "Python", "Power BI", "EDA"],
-    image: "/project2.png",
+    image: vendorImg,
     github: "https://github.com/Charmeer",
     live: null,
   },
