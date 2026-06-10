@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import stockMarketImg from "@assets/image_1781093786738.png";
 
 const PROJECTS = [
   {
@@ -26,7 +27,7 @@ const PROJECTS = [
     description:
       "Analysed 5 years of NSE and BSE OHLCV data using Python, covering volatility, drawdown, seasonality, and clustering. Applied ANOVA, Kruskal-Wallis testing, and bootstrap confidence intervals to validate market seasonality effects. Identified momentum trends, diversification limitations, and top-performing equities across the Indian market.",
     tags: ["Python", "Pandas", "Statistics", "Time Series", "ANOVA"],
-    image: "/project3.png",
+    image: stockMarketImg,
     github: "https://github.com/Charmeer",
     live: null,
   },
