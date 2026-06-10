@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profilePhoto from "@assets/WhatsApp_Image_2025-03-09_at_18.52.41_cf10f3e6_1781072752881.jpg";
 
 const SKILL_GROUPS = [
   { label: "Programming & DB", skills: ["Python", "SQL", "SQLite"] },
@@ -21,7 +22,7 @@ export function About() {
           <div className="relative">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden relative z-10">
               <img
-                src="/profile.png"
+                src={profilePhoto}
                 alt="Rohit Biswas portrait"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
               />
