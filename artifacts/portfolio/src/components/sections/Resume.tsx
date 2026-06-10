@@ -10,13 +10,13 @@ const EDUCATION = [
   {
     degree: "Intermediate / Class XII (CBSE)",
     school: "Sudhir Memorial Institute",
-    period: "2023 — 2024",
+    period: "",
     detail: "Score: 70%",
   },
   {
     degree: "Matriculation / Class X (CBSE)",
     school: "Sudhir Memorial Institute",
-    period: "2021 — 2022",
+    period: "",
     detail: "Score: 91.2%",
   },
 ];
@@ -79,7 +79,7 @@ export function Resume() {
                 >
                   <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-2 border-primary bg-background transition-colors group-hover:bg-primary" />
                   <div className="p-5 rounded-2xl bg-background border border-border/50 shadow-sm transition-all hover:shadow-md hover:border-primary/20">
-                    <span className="text-sm font-medium text-primary block mb-1">{edu.period}</span>
+                    {edu.period && <span className="text-sm font-medium text-primary block mb-1">{edu.period}</span>}
                     <h4 className="text-base font-serif font-medium text-foreground mb-0.5">{edu.degree}</h4>
                     <span className="text-sm text-muted-foreground block">{edu.school}</span>
                     <span className="text-xs text-primary/70 font-medium mt-1 block">{edu.detail}</span>
