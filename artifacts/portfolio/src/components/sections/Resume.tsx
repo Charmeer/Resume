@@ -1,5 +1,23 @@
 import { motion } from "framer-motion";
 
+const CERTIFICATES = [
+  {
+    title: "Mathematics: Basics to Advanced for Data Science and GenAI",
+    issuer: "Udemy",
+    instructor: "Krish Naik",
+  },
+  {
+    title: "Complete 2026 Python Bootcamp: Learn Python from Scratch",
+    issuer: "Udemy",
+    instructor: "Haris Ali Khan",
+  },
+  {
+    title: "Complete Data Science Course",
+    issuer: "Code with Harry",
+    instructor: "",
+  },
+];
+
 const EDUCATION = [
   {
     degree: "B.Sc. in Data Science",
@@ -61,6 +79,35 @@ export function Resume() {
         >
           <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Education & Skills</h2>
           <p className="text-muted-foreground text-lg">Academic background and technical expertise.</p>
+        </motion.div>
+
+        {/* Certificates */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <h3 className="text-xl font-serif font-medium mb-6 text-foreground">Certificates</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {CERTIFICATES.map((cert, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.4, delay: index * 0.08 }}
+                className="p-4 rounded-2xl bg-background border border-border/50 shadow-sm hover:shadow-md hover:border-primary/20 transition-all"
+              >
+                <p className="text-sm font-medium text-foreground leading-snug mb-2">{cert.title}</p>
+                <span className="text-xs text-primary/80 font-medium">{cert.issuer}</span>
+                {cert.instructor && (
+                  <span className="text-xs text-muted-foreground"> · {cert.instructor}</span>
+                )}
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-[1.2fr_1fr] gap-16">

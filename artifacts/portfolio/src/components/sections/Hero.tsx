@@ -65,7 +65,7 @@ export function Hero() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-12 bg-transparent border-border/60 hover:bg-muted" asChild>
-              <a href="/Rohit_Biswas_Resume.docx" download="Rohit_Biswas_Resume.docx">
+              <a href="/Rohit_Biswas_Resume.pdf" download="Rohit_Biswas_Resume.pdf">
                 <Download className="mr-2 h-4 w-4" /> Download CV
               </a>
             </Button>
