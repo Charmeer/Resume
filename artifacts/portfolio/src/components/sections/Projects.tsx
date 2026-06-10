@@ -3,6 +3,7 @@ import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import stockMarketImg from "@assets/image_1781093786738.png";
 import vendorImg from "@assets/image_1781094562724.png";
+import fraudSenseImg from "@assets/image_1781094781639.png";
 
 const PROJECTS = [
   {
@@ -10,7 +11,7 @@ const PROJECTS = [
     description:
       "Built a CatBoost-based fraud detection model achieving 88.3% Precision, 90.4% Recall, and 89.4% F1-score via threshold optimisation using Precision-Recall-F1 trade-off analysis. Applied SHAP explainability to surface key fraud drivers and feature importance rankings for stakeholder interpretation. Designed a multi-page interactive Power BI dashboard covering Executive Summary, Model Performance, SHAP Explainability, and Transaction Explorer.",
     tags: ["Python", "CatBoost", "SHAP", "Power BI", "Machine Learning"],
-    image: "/project1.png",
+    image: fraudSenseImg,
     github: "https://github.com/Charmeer",
     live: null,
   },
