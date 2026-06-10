@@ -45,7 +45,7 @@ export function Navbar() {
           onClick={(e) => scrollToSection(e, "#hero")}
           className="font-serif text-xl font-medium tracking-tight text-foreground hover:text-primary transition-colors"
         >
-          AC.
+          RB.
         </a>
 
         <nav className="hidden md:flex items-center gap-1 bg-muted/30 backdrop-blur-sm rounded-full p-1 border border-border/50">
