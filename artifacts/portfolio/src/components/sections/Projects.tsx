@@ -47,7 +47,17 @@ export function Projects() {
           className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-4"
         >
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Selected Projects</h2>
+            <div className="overflow-hidden mb-4">
+              <motion.h2
+                className="text-3xl md:text-4xl font-serif font-medium"
+                initial={{ y: "100%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Selected Projects
+              </motion.h2>
+            </div>
             <p className="text-muted-foreground text-lg max-w-xl">
               End-to-end analytics and ML projects — from raw data to business decisions.
             </p>

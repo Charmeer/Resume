@@ -13,9 +13,17 @@ export function Contact() {
           className="flex flex-col items-center text-center max-w-3xl mx-auto"
         >
           <span className="text-primary font-medium tracking-wide uppercase text-sm mb-4 block">What's Next?</span>
-          <h2 className="text-4xl md:text-6xl font-serif font-medium mb-6 text-balance">
-            Let's work on something meaningful.
-          </h2>
+          <div className="overflow-hidden mb-6">
+            <motion.h2
+              className="text-4xl md:text-6xl font-serif font-medium text-balance"
+              initial={{ y: "100%" }}
+              whileInView={{ y: "0%" }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Let's work on something meaningful.
+            </motion.h2>
+          </div>
           <p className="text-muted-foreground text-lg md:text-xl mb-12 max-w-xl">
             I'm open to internships, project collaborations, and data challenges. Whether you have a question or just want to connect, I'd love to hear from you.
           </p>

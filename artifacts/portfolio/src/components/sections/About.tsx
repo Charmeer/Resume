@@ -31,7 +31,17 @@ export function About() {
           </div>
 
           <div>
-            <h2 className="text-3xl md:text-4xl font-serif font-medium mb-6">Behind the data</h2>
+            <div className="overflow-hidden mb-6">
+              <motion.h2
+                className="text-3xl md:text-4xl font-serif font-medium"
+                initial={{ y: "100%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              >
+                Behind the data
+              </motion.h2>
+            </div>
 
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed mb-8">
               <p>

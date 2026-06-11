@@ -77,7 +77,17 @@ export function Resume() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-serif font-medium mb-4">Education & Skills</h2>
+          <div className="overflow-hidden mb-4">
+            <motion.h2
+              className="text-3xl md:text-4xl font-serif font-medium"
+              initial={{ y: "100%" }}
+              whileInView={{ y: "0%" }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            >
+              Education & Skills
+            </motion.h2>
+          </div>
           <p className="text-muted-foreground text-lg">Academic background and technical expertise.</p>
         </motion.div>
 
