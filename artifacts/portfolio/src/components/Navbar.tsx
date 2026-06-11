@@ -3,6 +3,7 @@ import { ThemeToggle } from "./ThemeToggle";
 import { useScrollSpy } from "@/hooks/use-scroll-spy";
 import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
+import { MagneticButton } from "./MagneticButton";
 
 const NAV_ITEMS = [
   { label: "About", href: "#about" },
@@ -71,9 +72,11 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Button className="hidden sm:inline-flex rounded-full font-medium" variant="default" size="sm" asChild>
-            <a href="/Rohit_Biswas_Resume.pdf" download="Rohit_Biswas_Resume.pdf">Download CV</a>
-          </Button>
+          <MagneticButton>
+            <Button className="hidden sm:inline-flex rounded-full font-medium" variant="default" size="sm" asChild>
+              <a href="/Rohit_Biswas_Resume.pdf" download="Rohit_Biswas_Resume.pdf">Download CV</a>
+            </Button>
+          </MagneticButton>
         </div>
       </div>
     </header>

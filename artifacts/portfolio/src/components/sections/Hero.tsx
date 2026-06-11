@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MagneticButton } from "@/components/MagneticButton";
 
 const HEADLINE_LINES = [
   { words: ["Turning", "data", "into"], italic: false },
@@ -75,16 +76,20 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
           >
-            <Button size="lg" className="rounded-full px-8 text-base h-12" asChild>
-              <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection("#projects"); }}>
-                View Projects <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-12 bg-transparent border-border/60 hover:bg-muted" asChild>
-              <a href="/Rohit_Biswas_Resume.pdf" download="Rohit_Biswas_Resume.pdf">
-                <Download className="mr-2 h-4 w-4" /> Download CV
-              </a>
-            </Button>
+            <MagneticButton>
+              <Button size="lg" className="rounded-full px-8 text-base h-12" asChild>
+                <a href="#projects" onClick={(e) => { e.preventDefault(); scrollToSection("#projects"); }}>
+                  View Projects <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </MagneticButton>
+            <MagneticButton>
+              <Button size="lg" variant="outline" className="rounded-full px-8 text-base h-12 bg-transparent border-border/60 hover:bg-muted" asChild>
+                <a href="/Rohit_Biswas_Resume.pdf" download="Rohit_Biswas_Resume.pdf">
+                  <Download className="mr-2 h-4 w-4" /> Download CV
+                </a>
+              </Button>
+            </MagneticButton>
           </motion.div>
         </div>
       </div>

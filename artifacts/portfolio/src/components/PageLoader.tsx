@@ -8,17 +8,23 @@ export function PageLoader({ onComplete }: { onComplete: () => void }) {
   const barScale = useTransform(count, [0, 100], [0, 1]);
 
   useEffect(() => {
-    const controls = animate(count, 100, {
-      duration: 1.4,
-      ease: [0.16, 1, 0.3, 1],
-      onComplete: () => {
-        setTimeout(() => {
-          setExiting(true);
-          setTimeout(onComplete, 900);
-        }, 180);
-      },
-    });
-    return controls.stop;
+    let controls: { stop: () => void } | null = null;
+    const startTimer = setTimeout(() => {
+      controls = animate(count, 100, {
+        duration: 1.6,
+        ease: [0.16, 1, 0.3, 1],
+        onComplete: () => {
+          setTimeout(() => {
+            setExiting(true);
+            setTimeout(onComplete, 900);
+          }, 700);
+        },
+      });
+    }, 600);
+    return () => {
+      clearTimeout(startTimer);
+      controls?.stop();
+    };
   }, []);
 
   return (
